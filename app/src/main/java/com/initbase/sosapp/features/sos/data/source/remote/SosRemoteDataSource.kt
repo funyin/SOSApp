@@ -19,7 +19,7 @@ class SosRemoteDataSource(private val service: SosService):SosDataSource {
         throw NotImplementedError()
     }
 
-    override suspend fun removeContact(mobile: String) {
+    override suspend fun removeContact(index: Int) {
         throw NotImplementedError()
     }
 

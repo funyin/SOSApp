@@ -19,9 +19,11 @@ class SosLocalDataSource(private val dataStore: DataStore<SosContacts>): SosData
         }
     }
 
-    override suspend fun removeContact(mobile: String) {
+    override suspend fun removeContact(index: Int) {
         dataStore.updateData {
-            it.toBuilder().clearItems().addAllItems(it.itemsList.filter {item-> item!=mobile}) .build()
+            val newList = it.itemsList.toMutableList()
+            newList.removeAt(index)
+            it.toBuilder().clearItems().addAllItems(newList) .build()
         }
     }
 

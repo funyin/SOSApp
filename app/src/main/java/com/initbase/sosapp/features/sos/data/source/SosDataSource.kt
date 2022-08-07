@@ -7,6 +7,6 @@ import kotlinx.coroutines.flow.Flow
 interface SosDataSource {
     suspend fun sendSOS(body: SendSosBody): SendSosResponse
     suspend fun addContact(mobile: String)
-    suspend fun removeContact(mobile: String)
+    suspend fun removeContact(index: Int)
     suspend fun getContacts(): Flow<List<String>>
 }

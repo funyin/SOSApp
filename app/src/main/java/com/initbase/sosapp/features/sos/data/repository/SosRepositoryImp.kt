@@ -23,8 +23,8 @@ class SosRepositoryImp(private val remoteDataSource:SosDataSource,private val lo
         localDataSource.addContact(mobile)
     }
 
-    override suspend fun removeContact(mobile: String) {
-        localDataSource.removeContact(mobile)
+    override suspend fun removeContact(index: Int) {
+        localDataSource.removeContact(index)
     }
 
     override suspend fun getContacts(): Flow<List<String>>  = localDataSource.getContacts()

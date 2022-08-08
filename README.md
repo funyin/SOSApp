@@ -1,6 +1,6 @@
 # SOS App
 An SOS app built with Jetpack compose and clean architecture.
-
+UI inspiration from https://dribbble.com/shots/15007249-SOS-Alert
 ## Basic Features
 -  Add and Remove emergency contact numbers
 - Capture Image

@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.initbase.sosapp"
-        minSdk 21
+        minSdk 23
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -92,6 +92,9 @@ dependencies {
 
     //Permissions
     implementation "com.google.accompanist:accompanist-permissions:0.26.0-alpha"
+
+    //Location
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
 }
 
 protobuf {

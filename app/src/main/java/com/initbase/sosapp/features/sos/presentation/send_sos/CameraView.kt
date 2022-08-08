@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.ContextCompat
 import com.initbase.sosapp.R
+import com.initbase.sosapp.core.util.getCameraProvider
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -97,13 +98,5 @@ fun CameraView(
                 )
             }
         )
-    }
-}
-
-private suspend fun Context.getCameraProvider(): ProcessCameraProvider = suspendCoroutine { continuation ->
-    ProcessCameraProvider.getInstance(this).also { cameraProvider ->
-        cameraProvider.addListener({
-            continuation.resume(cameraProvider.get())
-        }, ContextCompat.getMainExecutor(this))
     }
 }

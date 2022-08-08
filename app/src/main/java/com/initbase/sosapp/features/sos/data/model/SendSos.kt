@@ -3,10 +3,10 @@ package com.initbase.sosapp.features.sos.domain.use_cases
 data class SendSosBody (
     val phoneNumbers: List<String>,
     val image: String,
-    val location: Location
+    val location: LocationCoordinates
 )
 
-data class Location (
+data class LocationCoordinates (
     val longitude: String,
     val latitude: String
 )
@@ -17,9 +17,13 @@ data class SendSosResponse (
     val data: SendSosResponseData,
     val message: String
 )
+data class ErrorResponse (
+    val code: Int,
+    val message: String
+)
 data class SendSosResponseData (
     val phoneNumbers: List<String>,
     val image: String,
-    val location: Location,
+    val location: LocationCoordinates,
     val id: Long
 )

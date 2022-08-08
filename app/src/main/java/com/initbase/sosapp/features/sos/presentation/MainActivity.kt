@@ -28,9 +28,8 @@ import java.util.concurrent.Executors
 
 class MainActivity : ComponentActivity() {
     private val dataStore by lazy { applicationContext.contactsDataStore }
-    private val viewModel by viewModels<SosViewModel>{SosViewModelFactory(dataStore)}
+    private val viewModel by viewModels<SosViewModel>{SosViewModelFactory(dataStore,this)}
 
-    private lateinit var cameraOutputDirectory: File
     private val cameraExecutor: ExecutorService by lazy { Executors.newSingleThreadExecutor() }
 
     override fun onCreate(savedInstanceState: Bundle?) {

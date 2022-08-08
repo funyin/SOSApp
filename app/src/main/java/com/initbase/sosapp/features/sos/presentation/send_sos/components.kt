@@ -83,8 +83,10 @@ fun ContactsBottomSheet(viewModel: SosViewModel): @Composable() (ColumnScope.() 
         val items = state.contacts
         val focusManager = LocalFocusManager.current
         val onAddContact = {
-            viewModel.onEvent(SendSosEvent.AddNumber(textFieldValue))
-            focusManager.clearFocus()
+            if(textFieldValue.isNotEmpty()){
+                viewModel.onEvent(SendSosEvent.AddNumber(textFieldValue))
+                focusManager.clearFocus()
+            }
         }
         Row(modifier = Modifier
             .padding(16.dp)

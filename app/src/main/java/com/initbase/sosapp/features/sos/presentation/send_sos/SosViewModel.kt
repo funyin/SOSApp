@@ -135,7 +135,7 @@ class SosViewModel(private val repository: SosRepository) : ViewModel() {
         }
         updateScreenState(_screenState.value.copy(getLocationCallState = CallState.Loading))
         event.locationProviderClient
-            .lastLocation.addOnCompleteListener {task->
+            .getCurrentLocation(Priority.PRIORITY_HIGH_ACCURACY,null).addOnCompleteListener {task->
                 val location =task.result
                 if(location!=null)
                     updateScreenState(_screenState.value.copy(getLocationCallState = CallState.Success(location), location = location))

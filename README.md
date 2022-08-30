@@ -3,6 +3,12 @@ An SOS app built with Jetpack compose and clean architecture. UI inspiration fro
 
 <img src="https://github.com/funyin/SOSApp/blob/master/assets/Screenshot_20220808_144330.png?raw=true" alt="SOS App Preview" width="300"/>
 
+## Data sources
+- Local: ProtoDataStore
+- Remote: Dummy REST API
+- Image Capture: CameraX
+- Location Service: Google Location Service
+
 ## Basic Features
 -  Add and Remove emergency contact numbers
 - Capture Image

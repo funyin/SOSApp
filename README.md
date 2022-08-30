@@ -1,7 +1,10 @@
 # SOS App
 An SOS app built with Jetpack compose and clean architecture. UI inspiration from https://dribbble.com/shots/15007249-SOS-Alert
 
-<img src="https://github.com/funyin/SOSApp/blob/master/assets/Screenshot_20220808_144330.png?raw=true" alt="SOS App Preview" width="300"/>
+<div width="100%">
+<img src="https://github.com/funyin/SOSApp/blob/master/assets/Screenshot_20220808_144330.png?raw=true" alt="SOS App Preview" width="300"  style="float: left;"/>
+<img src="https://raw.githubusercontent.com/funyin/SOSApp/master/assets/Screenshot2.png" alt="SOS App Preview" width="300" style="float: right;"/>
+</div>
 
 ## Data sources
 - Local: ProtoDataStore
